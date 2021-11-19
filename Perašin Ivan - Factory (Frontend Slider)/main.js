@@ -1,5 +1,5 @@
-const firstR = document.getElementById('firstRow');
-const secondR = document.getElementById('secoundRow');
+const firstR = document.getElementById('upperRow');
+const secondR = document.getElementById('lowerRow');
 const btnLeft = document.getElementById('arrowLeft');
 const btnRight = document.getElementById('arrowRight');
 

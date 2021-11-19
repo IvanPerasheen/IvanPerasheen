@@ -4,14 +4,14 @@
         border-radius: 0px 0px 5px 5px;
     }
 
-    #divFirst {
+    #upperLeft {
         width: 301px;
         height: 100px;
         left: 0px;
         top: 0px;
     }
 
-    #divSecond {
+    #upperRight {
         width: 621px;
         height: 100px;
         left: 320px;
@@ -49,35 +49,35 @@
         height: 60px;
         right: 15px;
         top: 225px;
-        border: 1px solid #134880;
+        border: 1px solid #DDDDDD;
         box-sizing: border-box;
         border-radius: 5px;
     }
 
     #arrowLeft {
-        background: url("arrow-blue-left.png") no-repeat;
+        background: url("assets/arrow-gray-left.png") no-repeat;
         background-position: center;
-        transition: background-color 0.25s ease-out;
+        transition: border-color 0.25s ease-out;
     }
 
     #arrowRight {
         top: 290px;
-        background: url("arrow-blue-right.png") no-repeat;
+        background: url("assets/arrow-gray-right.png") no-repeat;
         background-position: center;
-        transition: background-color 0.25s ease-out;
+        transition: border-color 0.25s ease-out;
     }
 
     #arrowLeft:hover {
-        background: url("arrow-gray-left.png") no-repeat;
+        background: url("assets/arrow-blue-left.png") no-repeat;
         background-position: center;
-        background-color: #134880;
+        border: 1px solid #134880;
     }
 
     #arrowRight:hover {
         top: 290px;
-        background: url("arrow-gray-right.png") no-repeat;
+        background: url("assets/arrow-blue-right.png") no-repeat;
         background-position: center;
-        background-color: #134880;
+        border: 1px solid #134880;
     }
 
     h1 {
@@ -111,7 +111,7 @@
         color: #484A4C;
     }
 
-    #firstRowWrapper, #secoundRowWrapper {
+    #upperRowWrapper, #lowerRowWrapper {
         position: relative;
         overflow: hidden;
     }
