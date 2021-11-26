@@ -1,29 +1,32 @@
-const firstR = document.getElementById('upperRow');
-const secondR = document.getElementById('lowerRow');
+const upperRow = document.getElementById('upperRow');
+const lowerRow = document.getElementById('lowerRow');
 const btnLeft = document.getElementById('arrowLeft');
 const btnRight = document.getElementById('arrowRight');
+
+
 
 function insertAfter(x, target) {
     target.parentNode.insertBefore(x, target.nextSibling);
 }
 
 btnLeft.addEventListener('click', () => {
-    var widthUpper = firstR.firstChild.nextSibling.clientWidth + 10 + 'px';
-    var widthLower = secondR.firstChild.nextSibling.clientWidth + 10 + 'px';
+    var widthUpper = upperRow.firstChild.nextSibling.clientWidth + 10 + 'px';
+    var widthLower = lowerRow.firstChild.nextSibling.clientWidth + 10 + 'px';
 
-    firstR.insertBefore(firstR.firstChild, firstR.lastChild);
-    firstR.insertBefore(firstR.firstChild, firstR.lastChild);
-    secondR.insertBefore(secondR.firstChild, secondR.lastChild);
-    secondR.insertBefore(secondR.firstChild, secondR.lastChild);
+    upperRow.insertBefore(upperRow.firstChild, upperRow.lastChild);
+    upperRow.insertBefore(upperRow.firstChild, upperRow.lastChild);
+    lowerRow.insertBefore(lowerRow.firstChild, lowerRow.lastChild);
+    lowerRow.insertBefore(lowerRow.firstChild, lowerRow.lastChild);
 
-    firstR.animate([
+    upperRow.animate([
         { transform: 'translateX(' + widthUpper + ')' },
         { transform: 'translateX(-' + widthUpper / 2 + ')' }
+
     ], {
         duration: 500,
     });
 
-    secondR.animate([
+    lowerRow.animate([
         { transform: 'translateX(' + widthLower + ')' },
         { transform: 'translateX(-' + widthLower / 2 + ')' }
     ], {
@@ -37,17 +40,17 @@ window.setTimeout(function() {
 });
 
 btnRight.addEventListener('click', () => {
-    var widthUpper = firstR.lastChild.previousSibling.clientWidth + 10 + 'px';
-    var widthLower = secondR.lastChild.previousSibling.clientWidth + 10 + 'px';
+    var widthUpper = upperRow.lastChild.previousSibling.clientWidth + 10 + 'px';
+    var widthLower = lowerRow.lastChild.previousSibling.clientWidth + 10 + 'px';
 
-    firstR.animate([
+    upperRow.animate([
         { transform: 'translateX(0px)' },
         { transform: 'translateX(' + widthUpper + ')' }
     ], {
         duration: 500,
     });
 
-    secondR.animate([
+    lowerRow.animate([
         { transform: 'translateX(0px)' },
         { transform: 'translateX(' + widthLower + ')' }
     ], {
@@ -55,10 +58,10 @@ btnRight.addEventListener('click', () => {
     });
 
     setTimeout(function () {
-        insertAfter(firstR.lastChild, firstR.firstChild);
-        insertAfter(firstR.lastChild, firstR.firstChild);
-        insertAfter(secondR.lastChild, secondR.firstChild);
-        insertAfter(secondR.lastChild, secondR.firstChild);
+        insertAfter(upperRow.lastChild, upperRow.firstChild);
+        insertAfter(upperRow.lastChild, upperRow.firstChild);
+        insertAfter(lowerRow.lastChild, lowerRow.firstChild);
+        insertAfter(lowerRow.lastChild, lowerRow.firstChild);
     }, 500);
 
     btnRight.setAttribute('disabled','disabled');
