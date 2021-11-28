@@ -59,6 +59,7 @@
         background: url("assets/arrow-gray-left.png") no-repeat;
         background-position: center;
         transition: border-color 0.25s ease-out;
+        right:30px;
     }
 
     #arrowRight {
@@ -66,6 +67,7 @@
         background: url("assets/arrow-gray-right.png") no-repeat;
         background-position: center;
         transition: border-color 0.25s ease-out;
+        right:30px;
     }
 
     #arrowLeft:hover {
