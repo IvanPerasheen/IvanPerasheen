@@ -34,13 +34,14 @@
         left: -370px;
         flex-wrap: wrap;
         position: relative;
+        align-content: center;
     }
 
     img {
         height: 200px;
         width: auto;
         border-radius: 5px;
-        margin: 10px 0px 0px 10px;
+        margin: 5px 0px 0px 5px;
     }
 
     .arrow {
@@ -85,7 +86,7 @@
         width: 300.93px;
         height: 120px;
         right: -310.93px;
-        top: -25px;
+        top: -15px;
         font-family: Source Sans Pro;
         font-size: 32px;
         font-weight: bolder;
