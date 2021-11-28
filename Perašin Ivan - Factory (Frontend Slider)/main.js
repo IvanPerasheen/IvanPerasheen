@@ -33,10 +33,15 @@ btnLeft.addEventListener('click', () => {
         duration: 500,
     });
 
-btnLeft.setAttribute('disabled','disabled');
-window.setTimeout(function() {
-    btnLeft.removeAttribute("disabled");
-}, 500);
+    btnLeft.setAttribute('disabled', 'disabled');
+    window.setTimeout(function () {
+        btnLeft.removeAttribute("disabled");
+    }, 500);
+
+    btnRight.setAttribute('disabled', 'disabled');
+    window.setTimeout(function () {
+        btnRight.removeAttribute("disabled");
+    }, 500);
 });
 
 btnRight.addEventListener('click', () => {
@@ -64,8 +69,13 @@ btnRight.addEventListener('click', () => {
         insertAfter(lowerRow.lastChild, lowerRow.firstChild);
     }, 500);
 
-    btnRight.setAttribute('disabled','disabled');
-window.setTimeout(function() {
-    btnRight.removeAttribute("disabled");
-}, 500);
+    btnLeft.setAttribute('disabled', 'disabled');
+    window.setTimeout(function () {
+        btnLeft.removeAttribute("disabled");
+    }, 500);
+
+    btnRight.setAttribute('disabled', 'disabled');
+    window.setTimeout(function () {
+        btnRight.removeAttribute("disabled");
+    }, 500);
 });
